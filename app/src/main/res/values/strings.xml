@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">DragAndDraw</string>
+    <string name="menu_red">Red</string>
+    <string name="menu_blue">Blue</string>
+    <string name="menu_green">Green</string>
 </resources>

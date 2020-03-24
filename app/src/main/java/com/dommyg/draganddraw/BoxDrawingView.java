@@ -17,7 +17,7 @@ public class BoxDrawingView extends View {
 
     private Box currentBox;
     private List<Box> boxes = new ArrayList<>();
-    private Paint boxPaint;
+    private static Paint boxPaint;
     private Paint backgroundPaint;
 
     // Used when creating the view in code.
@@ -85,5 +85,19 @@ public class BoxDrawingView extends View {
         Log.i(TAG, action + " at x=" + current.x + ", y=" + current.y);
 
         return true;
+    }
+
+    public static void setColor(int choice) {
+        switch (choice) {
+            case 1:
+                boxPaint.setColor(0x22ff0000);
+                break;
+            case 2:
+                boxPaint.setColor(0x22009E3B);
+                break;
+            case 3:
+                boxPaint.setColor(0x220083FF);
+                break;
+        }
     }
 }
