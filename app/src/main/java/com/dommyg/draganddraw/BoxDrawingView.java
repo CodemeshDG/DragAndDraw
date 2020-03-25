@@ -49,7 +49,7 @@ public class BoxDrawingView extends View {
             float top = Math.min(box.getOrigin().y, box.getCurrent().y);
             float bottom = Math.max(box.getOrigin().y, box.getCurrent().y);
 
-            canvas.drawRect(left, top, right, bottom, boxPaint);
+            canvas.drawRect(left, top, right, bottom, box.getColor());
         }
     }
 
@@ -62,7 +62,7 @@ public class BoxDrawingView extends View {
             case MotionEvent.ACTION_DOWN:
                 action = "ACTION_DOWN";
                 // Reset drawing state.
-                currentBox = new Box(current);
+                currentBox = new Box(current, boxPaint.getColor());
                 boxes.add(currentBox);
                 break;
             case MotionEvent.ACTION_MOVE:
@@ -93,10 +93,10 @@ public class BoxDrawingView extends View {
                 boxPaint.setColor(0x22ff0000);
                 break;
             case 2:
-                boxPaint.setColor(0x22009E3B);
+                boxPaint.setColor(0x220083FF);
                 break;
             case 3:
-                boxPaint.setColor(0x220083FF);
+                boxPaint.setColor(0x22009E3B);
                 break;
         }
     }

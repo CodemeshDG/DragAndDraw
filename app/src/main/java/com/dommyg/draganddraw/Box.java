@@ -1,25 +1,33 @@
 package com.dommyg.draganddraw;
 
+import android.graphics.Paint;
 import android.graphics.PointF;
 
-public class Box {
+class Box {
     private PointF origin;
     private PointF current;
+    private Paint color;
 
-    public Box(PointF origin) {
+    Box(PointF origin, int color) {
         this.origin = origin;
         this.current = origin;
+        this.color = new Paint();
+        this.color.setColor(color);
     }
 
-    public PointF getOrigin() {
+    PointF getOrigin() {
         return origin;
     }
 
-    public PointF getCurrent() {
+    PointF getCurrent() {
         return current;
     }
 
-    public void setCurrent(PointF current) {
+    void setCurrent(PointF current) {
         this.current = current;
+    }
+
+    public Paint getColor() {
+        return color;
     }
 }

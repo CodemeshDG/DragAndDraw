@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class DragAndDrawFragment extends Fragment {
-    public static DragAndDrawFragment newInstance() {
+    static DragAndDrawFragment newInstance() {
         return new DragAndDrawFragment();
     }
 
